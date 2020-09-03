@@ -1,0 +1,156 @@
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+}
+
+/* text */
+/* h1, h2, h3, h4, p {
+
+    margin: 0;
+} */
+
+h1, h2, h3, h4{
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ---> */
+
+/* buttons */
+
+button.btn {
+
+    background-color: #fff;
+    height: fit-content;
+    padding: 10px;
+    border: 0px solid #fff;
+    border-radius: 18px;
+}
+
+
+/* layout */
+
+header section.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+}
+
+header section.container > div {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+header section.container .content {
+
+    text-align: center;
+}
+
+header section.container .content > * {
+    margin: 0;
+}
+
+header section.container > .primary{
+    justify-content: center;
+    align-content: center;
+    min-height: 400px;
+    background-color: lightblue;
+    background-image: url('img/family.png');
+    background-repeat: no-repeat;
+    background-size: 200px,200px;
+    background-position: bottom right; 
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+header section.container > .learn-more{
+    min-height: 300px;
+    justify-content: center;
+    align-content: center;
+    background-color: orange;
+}
+
+header section.container > .join-today{
+    min-height: 300px;
+    justify-content: center;
+    align-content: center;
+    background-color: yellow;
+}
+
+/* nav  */
+nav {
+
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+nav ul {
+
+    list-style: none;
+    padding: 0;
+}
+
+nav ul > li {
+    
+    display: inline;
+}
+nav ul > li > a {
+
+    color: gray;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/* ----> */
+
+/* main  */
+
+main section.main-content > div {
+
+    min-height: 400px;
+}
+
+main section.main-content > .personal {
+
+    background-color: grey;
+}
+
+main section.main-content > .about-us {
+
+    background-color: yellow;
+}
+
+
+/* ---> */
+
+
+/* footer */
+
+footer {
+
+    background-color: grey;
+    min-height: 400px;
+}
+/* layout mobile */
+
+@media only screen and (max-width: 600px) {
+
+    header section.container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+  /* ---> */
